@@ -357,8 +357,8 @@ $logo_word = array_slice($words, 0, 2);
 
             <div class="story-block">
                 <span class="story-icon">📅</span>
-                <p class="story-label">Umur &amp; Kelas</p>
-                <p class="story-val"><?= $umur ?> Tahun &bull; Kelas <?= htmlspecialchars($kelas) ?></p>
+                <p class="story-label">Umur </p>
+                <p class="story-val"><?= $umur ?> Tahun </p>
             </div>
 
         </div>
