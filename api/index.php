@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_ulasan'])) {
 
 // DATA BIODATA
 $nama      = "Abdullah Azwar Anas";
-$umur      = 18;
+$umur      = 19;
 $kelas     = "A";
 $prodi     = "Sistem Teknologi Informasi";
 $sekolah   = "Universitas Muhammadiyah Pringsewu";
