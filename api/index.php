@@ -90,7 +90,7 @@ $logo_word = array_slice($words, 0, 2);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Biodata <?= $nama ?> – <?= $prodi ?>, <?= $sekolah ?>">
     <title><?= ucfirst($page) ?> — <?= $nama ?></title>
-    <link rel="stylesheet" href="../percobaan_2.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="/percobaan_2.css?v=<?= time() ?>">
 </head>
 <body>
 
