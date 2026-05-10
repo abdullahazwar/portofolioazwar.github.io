@@ -7,7 +7,8 @@
 */
 
 // HANDLE FORM ULASAN (POST)
-$ulasan_file = __DIR__ . '/../ulasan.json';
+// Vercel memiliki read-only file system, jadi kita gunakan folder /tmp jika berjalan di Vercel
+$ulasan_file = getenv('VERCEL') ? '/tmp/ulasan.json' : __DIR__ . '/../ulasan.json';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_ulasan'])) {
     $nama_rv = htmlspecialchars(trim($_POST['nama_reviewer'] ?? ''), ENT_QUOTES);
@@ -27,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_ulasan'])) {
             'rating' => $rating,
             'waktu'  => date('d M Y, H:i'),
         ]);
-        file_put_contents($ulasan_file, json_encode($list, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        @file_put_contents($ulasan_file, json_encode($list, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
     }
     header("Location: index.php?page=ulasan");
     exit();
@@ -90,7 +91,7 @@ $logo_word = array_slice($words, 0, 2);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Biodata <?= $nama ?> – <?= $prodi ?>, <?= $sekolah ?>">
     <title><?= ucfirst($page) ?> — <?= $nama ?></title>
-    <link rel="stylesheet" href="/percobaan_2.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="../percobaan_2.css?v=<?= time() ?>">
 </head>
 <body>
 
