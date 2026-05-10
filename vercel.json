@@ -6,7 +6,27 @@
   },
   "routes": [
     {
+      "src": "/percobaan_2.css",
+      "dest": "/percobaan_2.css"
+    },
+    {
+      "src": "/foto.png",
+      "dest": "/foto.png"
+    },
+    {
+      "src": "/percobaan_1.html",
+      "dest": "/percobaan_1.html"
+    },
+    {
+      "src": "/",
+      "dest": "/percobaan_1.html"
+    },
+    {
       "src": "/api/(.*)",
+      "dest": "/api/index.php"
+    },
+    {
+      "src": "/(.*)",
       "dest": "/api/index.php"
     }
   ]
