@@ -6,14 +6,24 @@
     <!-- Meta refresh fallback redirect -->
     <meta http-equiv="refresh" content="0; url=api/index.php">
     <title>Biodata Mahasiswa</title>
+    <link rel="stylesheet" href="percobaan_2.css">
     <!-- JS redirect (faster) -->
     <script>window.location.replace('api/index.php');</script>
-    <link rel="stylesheet" href="percobaan_2.css">
+    <style>
+        .redirect-fallback {
+            font-family: sans-serif;
+            padding: 40px;
+            color: #475569;
+        }
+        .redirect-link {
+            color: #2563eb;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <p style="font-family:sans-serif;padding:40px;color:#475569;">
-        <a href="api/index.php" style="color:#2563eb;"></a>
-
+    <p class="redirect-fallback">
+        <a href="api/index.php" class="redirect-link">Click here if you are not redirected automatically.</a>
     </p>
 </body>
 </html>
